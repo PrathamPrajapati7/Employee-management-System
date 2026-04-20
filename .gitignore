@@ -1,0 +1,21 @@
+# Maven
+target/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# Tomcat
+apache-tomcat-*/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive config - keep db.properties but remind to change credentials
+# src/main/resources/db.properties
