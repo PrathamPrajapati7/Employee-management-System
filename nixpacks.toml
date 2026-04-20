@@ -1,11 +1,13 @@
 [phases.setup]
 nixPkgs = ["jdk11", "maven"]
+aptPkgs = []
 
 [phases.build]
+dependsOn = ["setup"]
 cmds = [
     "cp src/main/resources/db-railway.properties src/main/resources/db.properties",
-    "mvn clean package -DskipTests"
+    "mvn clean package -DskipTests -q"
 ]
 
 [start]
-cmd = "mvn tomcat7:run -Dmaven.tomcat.port=$PORT"
+cmd = "mvn tomcat7:run -Dmaven.tomcat.port=$PORT -q"
