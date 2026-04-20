@@ -1,1 +1,1 @@
-web: mvn tomcat7:run -Dmaven.tomcat.port=$PORT
+web: java -jar target/employee-mgmt.war --server.port=$PORT
