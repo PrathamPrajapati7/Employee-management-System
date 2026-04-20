@@ -5,4 +5,4 @@ nixPkgs = ["jdk11", "maven"]
 cmds = ["mvn clean package -DskipTests"]
 
 [start]
-cmd = "java -jar target/employee-mgmt.war"
+cmd = "mvn tomcat7:run -Dmaven.tomcat.port=$PORT"
